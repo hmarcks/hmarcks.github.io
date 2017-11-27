@@ -29,7 +29,7 @@ body {
 a {
   color: $text-color;
   text-decoration: none;
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid $text-color;
 
   &:visited {
     color: $text-color;
@@ -37,8 +37,7 @@ a {
 }
 
 p {
-  font-size: 1rem;
-  margin: 0 0 1rem 0;
+  margin: 0 0 2rem 0;
 }
 
 img,
@@ -64,7 +63,7 @@ video {
 }
 
 .intro {
-  max-width: 30rem;
+  max-width: 33rem;
 }
 
 nav {
@@ -75,70 +74,3 @@ nav {
   @include reset-list;
 }
 
-.heading {
-  margin: 0 0 2rem 0;
-  line-height: 1.2;
-  font-weight: normal;
-}
-.heading--1 {
-  font-size: 2.25rem;
-
-  @media (min-width: 28.75rem) {
-    font-size: 2.5rem;
-  }
-}
-.heading--2 {
-  font-size: 1.75rem;
-
-  @media (min-width: 28.75rem) {
-    font-size: 2rem;
-  }
-}
-.heading--3 {
-  font-size: 1.25rem;
-
-  @media (min-width: 28.75rem) {
-    font-size: 1.5rem;
-  }
-}
-.heading--light {
-  font-weight: 300;
-}
-.heading--timeline {
-  font-size: 0.85rem;
-  margin: 0 0 0.25rem 0;
-  font-weight: 600;
-  letter-spacing: 0.05rem;
-}
-
-.coming-soon {
-  margin-bottom: 3rem;
-}
-
-.hourglass-img {
-  position: relative;
-  top: 0.4rem;
-  width: 1rem;
-  max-width: 100%;
-  margin-right: 0.2rem;
-}
-
-footer {
-  padding-top: 1rem;
-  border-top: 1px solid $body-background;
-}
-
-.animated {
-  animation-name: fade-in;
-  animation-duration: 3s;
-}
-
-@keyframes fade-in {
-  0% {
-      opacity: 0;
-  }
-
-  100% {
-      opacity: 1;
-  }
-}
