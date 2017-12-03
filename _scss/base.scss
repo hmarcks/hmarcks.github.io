@@ -17,6 +17,7 @@ html {
   line-height: 1.5;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -30,9 +31,18 @@ a {
   color: $text-color;
   text-decoration: none;
   border-bottom: 1px solid $text-color;
+  transition: color 0.2s ease;
 
+  &:link,
   &:visited {
     color: $text-color;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: blue;
+    border-color: blue;
   }
 }
 
@@ -58,12 +68,12 @@ video {
 
   @media (min-width: 28.75rem) {
     border: 20px solid $body-background;
-    padding: 2rem 2rem 3rem 2rem;
+    padding: 2rem 2rem 4rem 2rem;
   }
 }
 
 .intro {
-  max-width: 33rem;
+  max-width: 32rem;
 }
 
 nav {
