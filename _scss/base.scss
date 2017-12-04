@@ -55,25 +55,19 @@ video {
   max-width: 100%;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
 .intro-container {
-  padding: 1rem 1rem 3rem 1rem;
+  padding: 1rem 2rem 3rem 2rem;
   border: 10px solid #efefef;
   background: white;
 
   @media (min-width: 28.75rem) {
     border: 20px solid $body-background;
-    padding: 2rem 2rem 4rem 2rem;
+    padding: 2rem 3rem 4rem 3rem;
   }
 }
 
 .intro {
-  max-width: 32rem;
+  max-width: 36rem;
 }
 
 nav {
@@ -82,5 +76,57 @@ nav {
 
 .navigation {
   @include reset-list;
+}
+
+// Expander: https://van11y.net/accessible-hide-show
+
+.js-to_expand[aria-hidden=true],
+.js-to_expand[data-hidden=true] {
+  display: none;
+}
+
+.animated-expandmore__button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: blue;
+    outline: 0;
+  }
+}
+.animated-expandmore__button:after,
+.animated-expandmore__button:after {
+  content : '+';
+}
+.animated-expandmore__button[aria-expanded=true]:after,
+.animated-expandmore__button[data-expanded=true]:after {
+  content : '-';
+}
+
+/* This is the opened state */
+.animated-expandmore__to_expand {
+ display: block;
+ overflow: hidden;
+ opacity: 1;
+ transition: visibility 0s ease, max-height 0.2s ease, opacity 0.2s ease ;
+ max-height: 80em;
+ /* magic number for max-height = enough height */
+ visibility: visible;
+ transition-delay: 0s;
+}
+/* This is the hidden state */
+[data-hidden=true].animated-expandmore__to_expand {
+ display: block;
+ max-height: 0;
+ opacity: 0;
+ visibility: hidden;
+ transition-delay: 1s, 0s, 0s;
 }
 
