@@ -67,7 +67,7 @@ video {
 }
 
 .intro {
-  max-width: 35rem;
+  max-width: 32rem;
 }
 
 nav {
@@ -104,6 +104,9 @@ nav {
 .animated-expandmore__button:after,
 .animated-expandmore__button:after {
   content : '+';
+  position: relative;
+  top: -1px;
+  font-weight: normal;
 }
 .animated-expandmore__button[aria-expanded=true]:after,
 .animated-expandmore__button[data-expanded=true]:after {
