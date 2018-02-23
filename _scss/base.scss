@@ -66,6 +66,12 @@ video {
   }
 }
 
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .intro {
   max-width: 32rem;
 }
@@ -132,4 +138,3 @@ nav {
  visibility: hidden;
  transition-delay: 1s, 0s, 0s;
 }
-
