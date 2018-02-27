@@ -1,0 +1,61 @@
+---
+layout: default
+title: Hunter Marcks - Process
+---
+<div class="mw8 ml-auto mr-auto pt4 pb6">
+  <div class="pb4">
+    <h1 class="f4 ma0">Design Resources</h1>
+  </div>
+
+  <hr class="mb4 resources__hr" />
+
+  <div class="flex-ns">
+    <div class="w-20-ns f6 mb4 resources__category">
+      <b>Problem</b>
+    </div>
+    <div class="w-80-ns">
+      {% for post in site.posts %}
+        {% if post.categories contains 'Problem' %}
+          {% include resources-item.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <hr class="mt4 mb4 resources__hr" />
+
+  <div class="flex-ns">
+    <div class="w-20-ns f6 mb4 resources__category">
+      <b>Research</b>
+    </div>
+    <div class="w-80-ns">
+      {% for post in site.posts %}
+        {% if post.categories contains 'Research' %}
+          {% include resources-item.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <hr class="mt4 mb4 resources__hr" />
+
+  <div class="flex-ns">
+    <div class="w-20-ns f6 mb4 resources__category">
+      <b>Make</b>
+    </div>
+    <div class="w-80-ns">
+      {% for post in site.posts %}
+        {% if post.categories contains 'Make' %}
+          {% include resources-item.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <hr class="mt4 mb5 resources__hr" />
+
+  <p class="mw6">
+    This is a list of my favorite design resources categorized in a high level design process. It's also where I play around with layout and typography.
+  </p>
+
+</div>

@@ -1,4 +1,5 @@
 $text-color: #dbdede;
+$link-hover: lightblue;
 
 @mixin reset-list {
   margin: 0;
@@ -40,8 +41,8 @@ a {
   &:hover,
   &:active,
   &:focus {
-    color: lightblue;
-    border-color: lightblue;
+    color: $link-hover;
+    border-color: $link-hover;
   }
 }
 
@@ -55,7 +56,7 @@ video {
 }
 
 .intro-container {
-  max-width: 520px;
+  max-width: 540px;
 }
 
 .resources__hr {
@@ -106,7 +107,7 @@ nav {
 
   &:hover,
   &:focus {
-    color: lightblue;
+    color: $link-hover;
     outline: 0;
   }
 }
