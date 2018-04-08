@@ -1,5 +1,5 @@
 $text-color: #dbdede;
-$link-hover: lightblue;
+$link-hover: white;
 
 @mixin reset-list {
   margin: 0;
@@ -30,8 +30,8 @@ body {
 a {
   color: $text-color;
   text-decoration: none;
-  border-bottom: 1px solid $text-color;
-  transition: color 0.2s ease;
+  border-bottom: 1px solid #8c8c8c;
+  transition: 0.2s ease;
 
   &:link,
   &:visited {
@@ -42,7 +42,6 @@ a {
   &:active,
   &:focus {
     color: $link-hover;
-    border-color: $link-hover;
   }
 }
 
@@ -59,19 +58,18 @@ video {
   max-width: 540px;
 }
 
-.resources__hr {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+.resources__hr { // creates a horizontal scrollbar - not desireable
+  // width: 100vw;
+  // position: relative;
+  // left: 50%;
+  // right: 50%;
+  // margin-left: -50vw;
+  // margin-right: -50vw;
+  // border-top: 2px solid #21231c;
   border: 0;
   height: 0;
-  border-top: 2px solid #21231c;
 }
 
-.resources__category,
 .resources__footer {
   color: #9e9e9e;
 }
@@ -96,31 +94,58 @@ nav {
 }
 
 .animated-expandmore__button {
+  display: inline-block;
   background: none;
   border: none;
   padding: 0;
   margin: 0;
-  font: inherit;
-  color: inherit;
-  font-size: 0.875rem;
-  font-weight: 700;
+  color: white;
+  opacity: 0.75;
+  font-family: inherit;
+  transition: .2s ease-in-out;
 
   &:hover,
   &:focus {
-    color: $link-hover;
     outline: 0;
+    opacity: 1;
   }
 }
-.animated-expandmore__button:after,
 .animated-expandmore__button:after {
-  content : '+';
+  content: ' ';
+  background: url('/assets/images/icons/icon-add-naked.svg') no-repeat;
   position: relative;
-  top: -1px;
-  font-weight: normal;
+  top: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: background-color .2s ease-in-out;
+}
+.animated-expandmore__button:hover:after {
+  background-color: #000000;
+  border-radius: 50%;
 }
 .animated-expandmore__button[aria-expanded=true]:after,
 .animated-expandmore__button[data-expanded=true]:after {
-  content : '-';
+  content: ' ';
+  background: url('/assets/images/icons/icon-subtract-solid.svg') no-repeat;
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+// Aligning the MORE+ button intro view
+.js-expandmore__icon--intro .animated-expandmore__button {
+  font-weight: 600;
+}
+.js-expandmore__icon--intro .animated-expandmore__button:hover:after {
+  background-color: rgba(0, 0, 0, 0);
+}
+.js-expandmore__icon--intro .animated-expandmore__button:after,
+.js-expandmore__icon--intro .animated-expandmore__button[aria-expanded=true]:after,
+.js-expandmore__icon--intro .animated-expandmore__button[data-expanded=true]:after {
+  margin-left: 0.25rem;
 }
 
 /* This is the opened state */
@@ -141,4 +166,24 @@ nav {
  opacity: 0;
  visibility: hidden;
  transition-delay: 1s, 0s, 0s;
+}
+
+.link--animate-right {
+  border-bottom: none;
+}
+.link--animate-right:after {
+    content: "";
+    background: url('/assets/images/icons/icon-arrow-right-flat.svg') no-repeat;
+    content: "";
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: 0.15s ease-in-out;
+}
+.link--animate-right:hover:after {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
 }
