@@ -110,7 +110,7 @@ nav {
     opacity: 1;
   }
 }
-.animated-expandmore__button:after {
+.animated-expandmore__button:before {
   content: ' ';
   background: url('/assets/images/icons/icon-add-naked.svg') no-repeat;
   position: relative;
@@ -121,12 +121,12 @@ nav {
   border-radius: 50%;
   transition: background-color .2s ease-in-out;
 }
-.animated-expandmore__button:hover:after {
+.animated-expandmore__button:hover:before {
   background-color: #000000;
   border-radius: 50%;
 }
-.animated-expandmore__button[aria-expanded=true]:after,
-.animated-expandmore__button[data-expanded=true]:after {
+.animated-expandmore__button[aria-expanded=true]:before,
+.animated-expandmore__button[data-expanded=true]:before {
   content: ' ';
   background: url('/assets/images/icons/icon-subtract-solid.svg') no-repeat;
   position: relative;
@@ -139,13 +139,13 @@ nav {
 .js-expandmore__icon--intro .animated-expandmore__button {
   font-weight: 600;
 }
-.js-expandmore__icon--intro .animated-expandmore__button:hover:after {
+.js-expandmore__icon--intro .animated-expandmore__button:hover:before {
   background-color: rgba(0, 0, 0, 0);
 }
-.js-expandmore__icon--intro .animated-expandmore__button:after,
-.js-expandmore__icon--intro .animated-expandmore__button[aria-expanded=true]:after,
-.js-expandmore__icon--intro .animated-expandmore__button[data-expanded=true]:after {
-  margin-left: 0.25rem;
+.js-expandmore__icon--intro .animated-expandmore__button:before,
+.js-expandmore__icon--intro .animated-expandmore__button[aria-expanded=true]:before,
+.js-expandmore__icon--intro .animated-expandmore__button[data-expanded=true]:before {
+  margin-right: 0.25rem;
 }
 
 /* This is the opened state */
