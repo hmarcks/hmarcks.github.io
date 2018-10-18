@@ -50,9 +50,9 @@ video {
   max-width: 100%;
 }
 
-.site__container {
-  background: #272822;
-}
+// .site__container {
+//   background: #272822;
+// }
 
 .intro-container {
   max-width: 540px;
@@ -213,7 +213,7 @@ nav {
 
 .links-trip {
   position: relative;
-  left: -80px;
+  left: -50px;
   display: inline-block;
   vertical-align: middle;
   background:
@@ -226,29 +226,30 @@ nav {
   background-size: 1000%;
   animation: slide 22s linear infinite;
   transition: 1s ease-in-out all;
-  box-shadow: inset 0 0 100px 100px #272822;
-  width: 250px;
-  height: 250px;
+  box-shadow: inset 0 0 60px 60px #24251e;
+  width: 180px;
+  height: 200px;
 }
 
 .links-icon {
   position: absolute;
-  top: 102px;
-  left: 100px;
+  top: 76px;
+  left: 63px;
   fill: #272822;
+  opacity: 0.75;
   transform: rotate(-45deg);
 }
 
 .links-link {
   position: relative;
-  top: -48px;
+  top: -28px;
   vertical-align: middle;
   max-width: 350px;
   font-size: 1.25rem;
 
   @media screen and (min-width: 650px) {
-    top: 12px;
-    left: -130px;
+    top: 10px;
+    left: -74px;
     display: inline-block;
   }
 }
