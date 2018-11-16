@@ -22,7 +22,7 @@ html {
 
 body {
   margin: 0;
-  background: #24251e;
+  background: #171918;
   color: $text-color;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
 }
@@ -55,7 +55,7 @@ video {
 // }
 
 .intro-container {
-  max-width: 540px;
+  max-width: 620px;
 }
 
 .resources__hr { // creates a horizontal scrollbar - not desireable
@@ -226,15 +226,15 @@ nav {
   background-size: 1000%;
   animation: slide 22s linear infinite;
   transition: 1s ease-in-out all;
-  box-shadow: inset 0 0 60px 60px #24251e;
-  width: 180px;
-  height: 200px;
+  box-shadow: inset 0 0 60px 60px #171918;
+  width: 160px;
+  height: 180px;
 }
 
 .links-icon {
   position: absolute;
-  top: 76px;
-  left: 63px;
+  top: 64px;
+  left: 52px;
   fill: #272822;
   opacity: 0.75;
   transform: rotate(-45deg);
@@ -245,7 +245,6 @@ nav {
   top: -28px;
   vertical-align: middle;
   max-width: 350px;
-  font-size: 1.25rem;
 
   @media screen and (min-width: 650px) {
     top: 10px;
