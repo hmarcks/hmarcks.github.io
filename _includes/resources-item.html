@@ -1,19 +1,21 @@
+<hr class="mb2 resources__hr" />
 <article class="mb4">
-  <section class="w-100 w-80-m w-70-l">
-    <h3 class="w-80 w-60-l dib ma0 pr4 f4 fw4">
-      <a href="{{ post.link-external }}">
-        {{ post.title }}
-      </a>
-    </h3>
-    <br />
-    <span class="f6 resources__footer">
-      {{ post.author }}
-    </span>
-    <div class="js-expandmore" data-hideshow-prefix-class="animated"></div>
-    <span class="js-to_expand w-100">
+  <section>
+    <div class="flex-l items-start justify-between">
+      <div class="mw7">
+        <h3 class="dib ma0 pr4 f4 fw8">
+          <a href="{{ post.link-external }}">
+            {{ post.title }}
+          </a>
+        </h3>
+      </div>
+      <div class="light-silver f6">
+        {{ post.author }}
+      </div>
+    </div>
+    <div class="moon-gray mw6">
       {{ post.content }}
-      <br />
-    </span>
+    </div>
   </section>
 </article>
 
