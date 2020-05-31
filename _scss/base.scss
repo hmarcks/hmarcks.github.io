@@ -218,8 +218,8 @@ nav {
 .links-trip {
   position: relative;
   display: inline-block;
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   vertical-align: middle;
   border-radius: 100%;
   background:
@@ -232,15 +232,27 @@ nav {
   background-size: 1000%;
   animation: slide 14s linear infinite;
   transition: 1s ease-in-out all;
+  @media screen and (min-width: 650px) {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .links-icon {
   position: absolute;
-  top: 17px;
-  left: 18px;
+  top: 9px;
+  left: 9px;
+  width: 40px;
+  height: 40px;
   fill: #272822;
   opacity: 0.8;
   transform: rotate(-45deg);
+  @media screen and (min-width: 650px) {
+    top: 17px;
+    left: 18px;
+    width: 55px;
+    height: 55px;
+  }
 }
 
 .links-link {
