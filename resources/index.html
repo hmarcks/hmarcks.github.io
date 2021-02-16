@@ -1,77 +1,113 @@
 ---
 layout: default
-title: Design Hyperlinks - Hunter Marcks
+title: Design Notes - Hunter Marcks
 ---
-<div class="mw8 ml-auto mr-auto pt5 pb6">
-  <div class="mb6">
+<main class="mw8 ml-auto mr-auto pt3 pb4">
+  <div class="mb5">
     <div class="links-trip">
-      <svg
-      class="links-icon"
-      xmlns="http://www.w3.org/2000/svg"
-      width="55" height="55" viewBox="0 0 24 24">
-      <defs></defs><title>Artboard 1</title><path class="cls-1" style="fill:#ffffff; opacity:0.85" d="M13.43,16.12a5.22,5.22,0,0,1-1.64-.27,2.78,2.78,0,0,1-1.22.29H6A2.74,2.74,0,0,1,3.28,13.4V13A2.73,2.73,0,0,1,6,10.29h4.56A2.73,2.73,0,0,1,13.3,13v.37h2.09V13A4.82,4.82,0,0,0,10.57,8.2H6A4.82,4.82,0,0,0,1.19,13v.38A4.83,4.83,0,0,0,6,18.23h4.56a4.83,4.83,0,0,0,4-2.11Z"/><path class="cls-1" style="fill:#ffffff; opacity:0.85" d="M18,5.77H13.43a4.83,4.83,0,0,0-4,2.11h1.12a5,5,0,0,1,1.64.28,2.65,2.65,0,0,1,1.22-.3H18a2.74,2.74,0,0,1,2.73,2.74V11A2.73,2.73,0,0,1,18,13.71H13.43A2.73,2.73,0,0,1,10.7,11v-.37H8.61V11a4.82,4.82,0,0,0,4.82,4.82H18A4.82,4.82,0,0,0,22.81,11V10.6A4.83,4.83,0,0,0,18,5.77Z"/></svg>
+      <svg class="links-icon" aria-hidden="true" viewBox="0 0 50 62" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 0H0v12h50V0H40v2H10V0zm18 62v-2H0V50h50v12H28zM0 14h50v10H0V14zm50 12H0v10h50V26zM0 38h50v10H0V38z" fill="#181918"/></svg>
     </div>
     <div class="links-link">
-      <h1 class="ma0 f4 f3-ns fw9">Design Hyperlinks</h1>
-      <p class="mt0 f5">Some of the design articles and resources that have been most helpful to me.</p>
+      <h1 class="ma0 f4 fw9">Design Notes</h1>
+      <p class="ma0 f5">Resources and reminders that I find important and helpful, emphasis on digital.</p>
     </div>
   </div>
 
-  <h2 class="bt b--light-purple mt0 mb3 fw9 f2">
-    Research
-  </h2>
-  <div class="mb5">
-    {% for post in site.posts %}
-      {% if post.categories contains 'Research' %}
-        {% include resources-item.html %}
-      {% endif %}
-    {% endfor %}
+  <div class="flex flex-wrap pb6">
+
+    <div class="w-100 w-50-m w-third-l">
+      <div class="bt bw1 b--dark-gray pr4-ns">
+        <h2 class="mt1 mb3 fw9 f4 f3-m f2-l">
+          Foundation
+        </h2>
+        <div class="mb5">
+          {% for post in site.posts %}
+            {% if post.categories contains 'Foundation' %}
+              {% include resources-item.html %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 w-50-m w-third-l">
+      <div class="bt bw1 b--dark-gray pr4-ns">
+        <h2 class="mt1 mb3 fw9 f4 f3-m f2-l">
+          Research
+        </h2>
+        <div class="mb5">
+          {% for post in site.posts %}
+            {% if post.categories contains 'Research' %}
+              {% include resources-item.html %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 w-50-m w-third-l">
+      <div class="bt bw1 b--dark-gray pr4-ns">
+        <h2 class="mt1 mb3 fw9 f4 f3-m f2-l">
+          Make
+        </h2>
+        <div class="mb5">
+          {% for post in site.posts %}
+            {% if post.categories contains 'Make' %}
+              {% include resources-item.html %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 w-50-m w-third-l">
+      <div class="bt bw1 b--dark-gray pr4-ns">
+        <h2 class="mt1 mb3 fw9 f4 f3-m f2-l">
+          Feedback
+        </h2>
+        <div class="mb5">
+          {% for post in site.posts %}
+            {% if post.categories contains 'Feedback' %}
+              {% include resources-item.html %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 w-50-m w-third-l">
+      <div class="bt bw1 b--dark-gray pr4-ns">
+        <h2 class="mt1 mb3 fw9 f4 f3-m f2-l">
+          Build
+        </h2>
+        <div class="mb5">
+          {% for post in site.posts %}
+            {% if post.categories contains 'Build' %}
+              {% include resources-item.html %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 w-50-m w-third-l">
+      <div class="bt bw1 b--dark-gray pr4-ns">
+        <h2 class="mt1 mb3 fw9 f4 f3-m f2-l">
+          Measure
+        </h2>
+        <div class="mb5">
+          {% for post in site.posts %}
+            {% if post.categories contains 'Measure' %}
+              {% include resources-item.html %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <h2 class="bt b--light-red mt0 mb3 fw9 f2">
-    Make
-  </h2>
-  <div class="mb5">
-    {% for post in site.posts %}
-      {% if post.categories contains 'Make' %}
-        {% include resources-item.html %}
-      {% endif %}
-    {% endfor %}
-  </div>
+  <div class="w2 bt bw1 b--dark-gray pb3"></div>
+  <p><a href="/" class="link--animate-left">About Me</a></p>
 
-  <h2 class="bt b--light-yellow mt0 mb3 fw9 f2">
-    Feedback
-  </h2>
-  <div class="mb5">
-    {% for post in site.posts %}
-      {% if post.categories contains 'Feedback' %}
-        {% include resources-item.html %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <h2 class="bt b--green mt0 mb3 fw9 f2">
-    Build
-  </h2>
-  <div class="mb5">
-    {% for post in site.posts %}
-      {% if post.categories contains 'Build' %}
-        {% include resources-item.html %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <h2 class="bt b--light-blue mt0 mb3 fw9 f2">
-    Measure
-  </h2>
-  <div class="mb5">
-    {% for post in site.posts %}
-      {% if post.categories contains 'Measure' %}
-        {% include resources-item.html %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <p class="mt6"><a href="/" class="link--animate-left">About Me</a></p>
-
-</div>
+</main>
