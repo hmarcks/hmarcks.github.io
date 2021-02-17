@@ -2,112 +2,127 @@
 layout: default
 title: Design Notes - Hunter Marcks
 ---
-<main class="mw8 ml-auto mr-auto pt3 pb4">
-  <div class="mb5">
-    <div class="links-trip">
-      <svg class="links-icon" aria-hidden="true" viewBox="0 0 50 62" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 0H0v12h50V0H40v2H10V0zm18 62v-2H0V50h50v12H28zM0 14h50v10H0V14zm50 12H0v10h50V26zM0 38h50v10H0V38z" fill="#181918"/></svg>
-    </div>
-    <div class="links-link">
-      <h1 class="ma0 f4 fw9">Design Notes</h1>
-      <p class="ma0 f5">Resources and reminders that I find important and helpful, emphasis on digital.</p>
-    </div>
-  </div>
+<main>
+  <div class="ph3 ph4-ns">
+    <div class="mw8 ml-auto mr-auto pt3 pb4">
 
-  <div class="flex flex-wrap pb6">
-
-    <div class="w-100 w-50-m w-third-l">
-      <div class="bt bw1 b--dark-gray pr4-ns">
-        <h2 class="mt1 mb3 fw9 f4 f3-m f2-l">
-          Foundation
-        </h2>
-        <div class="mb5">
-          {% for post in site.posts %}
-            {% if post.categories contains 'Foundation' %}
-              {% include resources-item.html %}
-            {% endif %}
-          {% endfor %}
+      <div class="mb5">
+        <div class="links-trip">
+          <svg class="links-icon" aria-hidden="true" viewBox="0 0 50 62" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 0H0v12h50V0H40v2H10V0zm18 62v-2H0V50h50v12H28zM0 14h50v10H0V14zm50 12H0v10h50V26zM0 38h50v10H0V38z" fill="#181918"/></svg>
+        </div>
+        <div class="links-link">
+          <h1 class="ma0 f4 fw9">Design Notes</h1>
+          <p class="ma0 f5">Resources and reminders that I find important and helpful, emphasis on digital.</p>
         </div>
       </div>
-    </div>
 
-    <div class="w-100 w-50-m w-third-l">
-      <div class="bt bw1 b--dark-gray pr4-ns">
-        <h2 class="mt1 mb3 fw9 f4 f3-m f2-l">
-          Research
-        </h2>
-        <div class="mb5">
-          {% for post in site.posts %}
-            {% if post.categories contains 'Research' %}
-              {% include resources-item.html %}
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-    </div>
+      <div class="flex flex-wrap pb6">
 
-    <div class="w-100 w-50-m w-third-l">
-      <div class="bt bw1 b--dark-gray pr4-ns">
-        <h2 class="mt1 mb3 fw9 f4 f3-m f2-l">
-          Make
-        </h2>
-        <div class="mb5">
-          {% for post in site.posts %}
-            {% if post.categories contains 'Make' %}
-              {% include resources-item.html %}
-            {% endif %}
-          {% endfor %}
+        <div class="w-100 w-50-m w-third-l">
+          <div class="bt bw1 b--dark-gray pr3-ns mr2-ns">
+            <h2 class="mt1 mb3 fw9 f4 f3 f2-l">
+              Foundation
+            </h2>
+            <div class="mb5">
+              {% for post in site.posts %}
+                {% if post.categories contains 'Foundation' %}
+                  {% include resources-item.html %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="w-100 w-50-m w-third-l">
-      <div class="bt bw1 b--dark-gray pr4-ns">
-        <h2 class="mt1 mb3 fw9 f4 f3-m f2-l">
-          Feedback
-        </h2>
-        <div class="mb5">
-          {% for post in site.posts %}
-            {% if post.categories contains 'Feedback' %}
-              {% include resources-item.html %}
-            {% endif %}
-          {% endfor %}
+        <div class="w-100 w-50-m w-third-l">
+          <div class="bt bw1 b--dark-gray pr3-ns mr2-ns">
+            <h2 class="mt1 mb3 fw9 f3 f2-l">
+              Research
+            </h2>
+            <div class="mb5">
+              {% for post in site.posts %}
+                {% if post.categories contains 'Research' %}
+                  {% include resources-item.html %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="w-100 w-50-m w-third-l">
-      <div class="bt bw1 b--dark-gray pr4-ns">
-        <h2 class="mt1 mb3 fw9 f4 f3-m f2-l">
-          Build
-        </h2>
-        <div class="mb5">
-          {% for post in site.posts %}
-            {% if post.categories contains 'Build' %}
-              {% include resources-item.html %}
-            {% endif %}
-          {% endfor %}
+        <div class="w-100 w-50-m w-third-l">
+          <div class="bt bw1 b--dark-gray pr3-ns mr2-ns">
+            <h2 class="mt1 mb3 fw9 f3 f2-l">
+              Make
+            </h2>
+            <div class="mb5">
+              {% for post in site.posts %}
+                {% if post.categories contains 'Make' %}
+                  {% include resources-item.html %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="w-100 w-50-m w-third-l">
-      <div class="bt bw1 b--dark-gray pr4-ns">
-        <h2 class="mt1 mb3 fw9 f4 f3-m f2-l">
-          Measure
-        </h2>
-        <div class="mb5">
-          {% for post in site.posts %}
-            {% if post.categories contains 'Measure' %}
-              {% include resources-item.html %}
-            {% endif %}
-          {% endfor %}
+        <div class="w-100 w-50-m w-third-l">
+          <div class="bt bw1 b--dark-gray pr3-ns mr2-ns">
+            <h2 class="mt1 mb3 fw9 f3 f2-l">
+              Feedback
+            </h2>
+            <div class="mb5">
+              {% for post in site.posts %}
+                {% if post.categories contains 'Feedback' %}
+                  {% include resources-item.html %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
         </div>
+
+        <div class="w-100 w-50-m w-third-l">
+          <div class="bt bw1 b--dark-gray pr3-ns mr2-ns">
+            <h2 class="mt1 mb3 fw9 f3 f2-l">
+              Build
+            </h2>
+            <div class="mb5">
+              {% for post in site.posts %}
+                {% if post.categories contains 'Build' %}
+                  {% include resources-item.html %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="w-100 w-50-m w-third-l">
+          <div class="bt bw1 b--dark-gray pr3-ns mr2-ns">
+            <h2 class="mt1 mb3 fw9 f3 f2-l">
+              Measure
+            </h2>
+            <div class="mb5">
+              {% for post in site.posts %}
+                {% if post.categories contains 'Measure' %}
+                  {% include resources-item.html %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
       </div>
+
     </div>
 
   </div>
 
   <div class="w2 bt bw1 b--dark-gray pb3"></div>
-  <p><a href="/" class="link--animate-left">About Me</a></p>
+
+  <div class="ph3 ph4-ns">
+    <div class="mw8 ml-auto mr-auto pt3 pb4">
+      <p class="mb5"><a href="/" class="link--animate-left">About Me</a></p>
+    </div>
+  </div>
 
 </main>
+
+
+
