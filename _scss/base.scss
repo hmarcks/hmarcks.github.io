@@ -13,6 +13,23 @@ $link-hover: white;
   box-sizing: border-box;
 }
 
+a,
+button,
+input,
+select,
+textarea {
+  transition: box-shadow 0.75s ease;
+}
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 4px #171918, 0 0 0 6px rgba(255,255,255,0.8);
+  outline: 2px solid transparent;
+  /* allows outline for Windows high contrast mode */
+}
+
 html {
   line-height: 1.4;
   -ms-text-size-adjust: 100%;
@@ -38,9 +55,7 @@ a {
     color: inherit;
   }
 
-  &:hover,
-  &:active,
-  &:focus {
+  &:hover {
     color: $link-hover;
   }
 }
@@ -94,7 +109,8 @@ nav {
 }
 
 .animated-expandmore__button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   background: none;
   border: none;
   padding: 0;
@@ -114,9 +130,6 @@ nav {
   content: ' ';
   background: url('/assets/images/icons/icon-add-naked.svg') no-repeat;
   background-color: #2e2e2e;
-  position: relative;
-  top: 4px;
-  display: inline-block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -130,9 +143,6 @@ nav {
 .animated-expandmore__button[data-expanded=true]:before {
   content: ' ';
   background: url('/assets/images/icons/icon-subtract-solid.svg') no-repeat;
-  position: relative;
-  top: 4px;
-  display: inline-block;
   width: 20px;
   height: 20px;
 }
@@ -259,9 +269,15 @@ nav {
   }
 }
 
+.notes-link {
+  transition: box-shadow 0.75s ease;
+}
+.notes-link:focus {
+  box-shadow: 0 0 0 12px #171918, 0 0 0 14px white;
+}
 .note-btn {
   position: absolute;
-  top: -3px;
+  top: 1px;
 }
 
 .sr-only {
