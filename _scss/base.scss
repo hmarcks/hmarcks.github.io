@@ -127,7 +127,7 @@ nav {
   }
 }
 .animated-expandmore__button:before {
-  content: ' ';
+  content: '';
   background: url('/assets/images/icons/icon-add-naked.svg') no-repeat;
   background-color: #2e2e2e;
   width: 20px;
@@ -137,7 +137,7 @@ nav {
 }
 .animated-expandmore__button[aria-expanded=true]:before,
 .animated-expandmore__button[data-expanded=true]:before {
-  content: ' ';
+  content: '';
   background: url('/assets/images/icons/icon-subtract-naked.svg') no-repeat;
   background-color: #2e2e2e;
   width: 20px;
@@ -233,6 +233,7 @@ nav {
   transition: 1s ease-in-out all;
   margin-right: 1.5rem;
   flex-shrink: 0;
+  border-radius: 4px;
 }
 
 .links-icon {
@@ -248,7 +249,7 @@ nav {
 .links-link {
   max-width: 350px;
   position: relative;
-  top: -5px;
+  top: -2px;
 }
 
 @keyframes slide {
@@ -272,6 +273,17 @@ nav {
 .note-btn {
   position: absolute;
   top: 1px;
+}
+
+.r-category {
+  flex-shrink: 0;
+}
+.r-post {
+  border-bottom: 1px solid #000;
+}
+.r-post:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .sr-only {

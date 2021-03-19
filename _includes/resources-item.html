@@ -1,42 +1,20 @@
-<article class="mb4">
-  <section class="relative">
 
-    <h3 class="ma0 ml4 f5 fw6">
-      <a class="bn" href="{{ post.link-external }}">
-        {{ post.title }}
-      </a>
-    </h3>
+<article class="r-post relative pb3 mb3">
 
-    <div class="note-btn mr2 js-expandmore" data-hideshow-prefix-class="animated">
-      <span class="sr-only">Expand</span>
-    </div>
-    <div class="js-to_expand w-100">
-      {{ post.content }}
-      <footer class="f6 resources__footer">
-        {{ post.author }}
-      </footer>
-    </div>
+  <h3 class="ma0 ml4 f5 fw5">
+    <a class="bn" href="{{ post.link-external }}">
+      {{ post.title }}
+    </a>
+  </h3>
 
-  </section>
+  <div class="note-btn mr2 js-expandmore" data-hideshow-prefix-class="animated">
+    <span class="sr-only">Expand</span>
+  </div>
+  <div class="js-to_expand mw6 ml4">
+    {{ post.content }}
+    <footer class="f6 resources__footer">
+      {{ post.author }}
+    </footer>
+  </div>
+
 </article>
-
-<!-- <hr class="mb2 resources__hr" />
-<article class="mb4">
-  <section>
-    <div class="flex-l items-start justify-between">
-      <div class="mw7">
-        <h3 class="dib ma0 pr4 fw6">
-          <a href="{{ post.link-external }}" class="bn">
-            {{ post.title }}
-          </a>
-        </h3>
-      </div>
-      <div class="light-silver f6">
-        {{ post.author }}
-      </div>
-    </div>
-    <div class="moon-gray mw6">
-      {{ post.content }}
-    </div>
-  </section>
-</article> -->
