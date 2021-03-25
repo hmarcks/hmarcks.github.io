@@ -2,9 +2,13 @@
 <article class="r-post relative pb3 mb3">
 
   <h3 class="ma0 ml4 f5 fw5">
-    <a class="bn" href="{{ post.link-external }}">
+    {% if post.link-external contains '/' %}
+      <a class="bn" href="{{ post.link-external }}">
+        {{ post.title }}
+      </a>
+    {% else %}
       {{ post.title }}
-    </a>
+    {% endif %}
   </h3>
 
   <div class="note-btn mr2 js-expandmore" data-hideshow-prefix-class="animated">

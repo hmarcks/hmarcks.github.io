@@ -28,6 +28,7 @@ textarea:focus {
   box-shadow: 0 0 0 4px #171918, 0 0 0 6px rgba(255,255,255,0.8);
   outline: 2px solid transparent;
   /* allows outline for Windows high contrast mode */
+  border-radius: 0.5px;
 }
 
 html {
@@ -218,8 +219,8 @@ nav {
 
 .links-trip {
   position: relative;
-  width: 55px;
-  height: 68px;
+  width: 50px;
+  height: 62px;
   vertical-align: middle;
   background:
     linear-gradient(-45deg,
@@ -240,10 +241,9 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  width: 55px;
-  height: 68px;
+  width: 50px;
+  height: 62px;
   fill: #272822;
-  opacity: 0.6;
 }
 
 .links-link {
@@ -278,13 +278,13 @@ nav {
 .r-category {
   flex-shrink: 0;
 }
-.r-post {
+/*.r-post {
   border-bottom: 1px solid #000;
 }
 .r-post:last-of-type {
   border-bottom: none;
   padding-bottom: 0;
-}
+}*/
 
 .sr-only {
   position: absolute;
