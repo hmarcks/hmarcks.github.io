@@ -1,5 +1,41 @@
 
-<article class="r-post relative pb3 mb3">
+<article class="r-post flex justify-between relative pb3 mb3">
+
+  <div>
+    <h3 class="js-expandmore dib f5 fw5 ma0 mr4" data-hideshow-prefix-class="animated">
+      {{ post.title }}
+    </h3>
+    <div class="js-to_expand r-content mw6">
+      {{ post.content }}
+      <footer class="f6 resources__footer">
+        {{ post.author }}
+      </footer>
+    </div>
+  </div>
+  {% if post.type. contains 'article' %}
+    <div>
+      <a class="bn" href="{{ post.link-external }}">
+        <svg width="29" height="14" viewBox="0 0 29 14" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.7 2.3L28.42 7l-4.7 4.7-1.42-1.4L24.6 8H16V6h8.59l-2.3-2.3 1.42-1.4zM0 4h10v2H0V4zM0 0h6v2H0V0zM0 8h10v2H0V8zM0 12h10v2H0v-2z" fill="#DBDEDE"/></svg>
+        <span class="sr-only">
+          Go to article: {{ post.title }}
+        </span>
+      </a>
+    </div>
+  {% elsif post.type. contains 'podcast' %}
+    <div>
+      <a class="bn" href="{{ post.link-external }}">
+        <svg width="29" height="14" viewBox="0 0 29 14" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 12V2h2v10H8zM23.7 2.3L28.42 7l-4.7 4.7-1.42-1.4L24.6 8H16V6h8.59l-2.3-2.3 1.42-1.4zM4 14V0h2v14H4zM0 10V4h2v6H0z" fill="#DBDEDE"/></svg>
+        <span class="sr-only">
+          Go to podcast: {{ post.title }}
+        </span>
+      </a>
+    </div>
+  {% endif %}
+
+</article>
+
+
+<!-- <article class="r-post relative pb3 mb3">
 
   <h3 class="ma0 ml4 f5 fw5">
     {% if post.link-external contains '/' %}
@@ -21,4 +57,14 @@
     </footer>
   </div>
 
-</article>
+</article> -->
+
+
+<!-- 
+
+- heading
+  - expand
+    - expanded content
+  - link 
+
+-->
