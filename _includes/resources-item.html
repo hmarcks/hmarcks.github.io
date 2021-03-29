@@ -14,8 +14,8 @@
   </div>
   {% if post.type. contains 'article' %}
     <div>
-      <a class="bn" href="{{ post.link-external }}">
-        <svg width="29" height="14" viewBox="0 0 29 14" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.7 2.3L28.42 7l-4.7 4.7-1.42-1.4L24.6 8H16V6h8.59l-2.3-2.3 1.42-1.4zM0 4h10v2H0V4zM0 0h6v2H0V0zM0 8h10v2H0V8zM0 12h10v2H0v-2z" fill="#DBDEDE"/></svg>
+      <a class="r-link bn" href="{{ post.link-external }}">
+        <svg width="29" height="14" viewBox="0 0 29 14" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.7 2.3L28.42 7l-4.7 4.7-1.42-1.4L24.6 8H16V6h8.59l-2.3-2.3 1.42-1.4zM0 0h5.83l4.67 3.5V14H0V0zm2 2v10h6.5V4.5L5.17 2H2z" fill="#DBDEDE"/></svg>
         <span class="sr-only">
           Go to article: {{ post.title }}
         </span>
@@ -23,7 +23,7 @@
     </div>
   {% elsif post.type. contains 'podcast' %}
     <div>
-      <a class="bn" href="{{ post.link-external }}">
+      <a class="r-link bn" href="{{ post.link-external }}">
         <svg width="29" height="14" viewBox="0 0 29 14" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 12V2h2v10H8zM23.7 2.3L28.42 7l-4.7 4.7-1.42-1.4L24.6 8H16V6h8.59l-2.3-2.3 1.42-1.4zM4 14V0h2v14H4zM0 10V4h2v6H0z" fill="#DBDEDE"/></svg>
         <span class="sr-only">
           Go to podcast: {{ post.title }}
@@ -33,38 +33,3 @@
   {% endif %}
 
 </article>
-
-
-<!-- <article class="r-post relative pb3 mb3">
-
-  <h3 class="ma0 ml4 f5 fw5">
-    {% if post.link-external contains '/' %}
-      <a class="bn" href="{{ post.link-external }}">
-        {{ post.title }}
-      </a>
-    {% else %}
-      {{ post.title }}
-    {% endif %}
-  </h3>
-
-  <div class="note-btn mr2 js-expandmore" data-hideshow-prefix-class="animated">
-    <span class="sr-only">Expand</span>
-  </div>
-  <div class="js-to_expand mw6 ml4">
-    {{ post.content }}
-    <footer class="f6 resources__footer">
-      {{ post.author }}
-    </footer>
-  </div>
-
-</article> -->
-
-
-<!-- 
-
-- heading
-  - expand
-    - expanded content
-  - link 
-
--->
